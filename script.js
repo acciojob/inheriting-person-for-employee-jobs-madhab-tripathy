@@ -6,7 +6,8 @@ function Person(name, age) {
 Person.prototype.greet = function(){
 	console.log(`Hello, my name is ${this.name} I am ${this.age} years old.`)
 }
-Employee.prototype.__proto__ = Person.prototype;
+// Employee.prototype.__proto__ = Person.prototype;
+Person.prototype.__proto__ = Employee.prototype
 function Employee(name, age, jobTitle) {
 	Person.call(this, name, age);
     this.jobTitle = jobTitle; 
